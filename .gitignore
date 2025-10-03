@@ -1,0 +1,30 @@
+
+
+#Ignore vscode AI rules
+.github/instructions/codacy.instructions.md
+# React Native
+# Node modules
+node_modules/
+# Build output
+android/app/build/
+ios/build/
+# Metro bundler cache
+.expo/
+.expo-shared/
+# Misc
+*.log
+*.lock
+.env
+# Xcode
+ios/Pods/
+*.xcuserdatad*
+*.xcworkspace
+*.xcodeproj
+# Android
+*.iml
+.gradle/
+local.properties
+.idea/
+# React Native packager
+packager-info.json
+react-native-debugger.json

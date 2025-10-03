@@ -29,7 +29,7 @@ export const generateQuiz = createAsyncThunk(
     try {
       const response = await api.post('/quiz/generate', payload);
       return response.data as Quiz;
-    } catch (error) {
+    } catch {
       // Fallback demo data enables offline development and previews.
       const mockQuiz: Quiz = {
         id: 'demo-quiz',

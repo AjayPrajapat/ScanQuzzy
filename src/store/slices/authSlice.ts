@@ -21,7 +21,7 @@ export const login = createAsyncThunk(
     const { accessToken, user } = response.data;
     await AsyncStorage.setItem('scanquzzy_token', accessToken);
     await AsyncStorage.setItem('scanquzzy_user', JSON.stringify(user));
-    return { accessToken, user as UserProfile };
+    return { accessToken, user: user as UserProfile };
   },
 );
 
