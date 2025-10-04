@@ -17,11 +17,17 @@ const initialState: AuthState = {
 export const login = createAsyncThunk(
   'auth/login',
   async (credentials: { email: string; password: string }) => {
-    const response = await api.post('/auth/login', credentials);
-    const { accessToken, user } = response.data;
+    // Bypass API call, return mock token and user
+    const accessToken = 'mock_token';
+    const user: UserProfile = {
+      id: '1',
+      name: 'Test User',
+      email: credentials.email,
+      // Add other UserProfile fields as needed
+    };
     await AsyncStorage.setItem('scanquzzy_token', accessToken);
     await AsyncStorage.setItem('scanquzzy_user', JSON.stringify(user));
-    return { accessToken, user: user as UserProfile };
+    return { accessToken, user };
   },
 );
 

@@ -4,7 +4,7 @@ import { Text, Divider, useTheme } from 'react-native-paper';
 import * as ImagePicker from 'expo-image-picker';
 import * as DocumentPicker from 'expo-document-picker';
 import { useNavigation } from '@react-navigation/native';
-import { CameraView, useCameraPermissions } from 'expo-camera';
+import { CameraView, useCameraPermissions } from 'expo-camera/next';
 import ScanButton from '@components/ScanButton';
 import api from '@services/api';
 import type { RootStackParamList } from '@navigation/AppNavigator';
